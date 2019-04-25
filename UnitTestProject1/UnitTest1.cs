@@ -20,7 +20,8 @@ namespace UnitTestProject1
             settings.Add("deviceName", "WindowsPC");
 
             var appCapabilities = new DesiredCapabilities(settings);
-            var filePath = @"%UserProfile%\Documents\Proof of Concepts\JustAWinForm\JustAWinForm\bin\Debug\JustAWinForm.exe";
+            var userProfilePath = Environment.GetEnvironmentVariable("UserProfile");
+            var filePath = $@"{userProfilePath}\Documents\Proof of Concepts\JustAWinForm\JustAWinForm\bin\Debug\JustAWinForm.exe";
             appCapabilities.SetCapability("app", filePath);
 
             var localHostUri = new Uri("http://127.0.0.1:4723/wd/hub");
