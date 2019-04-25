@@ -41,7 +41,7 @@ namespace UnitTestProject1
 
             WindowsElement textBox = sessionDriver.FindElementByAccessibilityId("txtTextToConvert");
             textBox.SendKeys(expectedResult.ToLower());
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(2000);
             WindowsElement btnUpperize = sessionDriver.FindElementByAccessibilityId("btnConvertToUpper");
             btnUpperize.Click();
 
